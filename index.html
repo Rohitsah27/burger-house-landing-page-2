@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BURGER</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .first-page {
+            width: 100%;
+            height: 100vh;
+            background: url(./img/Rectangle.png);
+            position: relative;
+        }
+
+        .logo {
+            height: 40px;
+            margin: 30px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style-type: none;
+            gap: 27px;
+            font-size: 17px;
+            color: #3d2514;
+            font-family: "Oswald", sans-serif;
+            position: absolute;
+            right: 30px;
+            top: 75px;
+        }
+
+        .delivery {
+            font-family: sans-serif;
+            position: absolute;
+            right: 30px;
+            top: 50px;
+            font-size: 16px;
+
+        }
+
+        .delivery-logo {
+            font-family: sans-serif;
+            font-weight: 600;
+            position: absolute;
+            right: 280px;
+            top: 45px;
+            height: 25px;
+        }
+
+        .food {
+            position: absolute;
+            right: 150px;
+            top: 15px;
+        }
+
+        .des {
+            border: 2px dashed #3d2514;
+            padding: 0px 10px;
+            display: inline-block;
+            margin-top: 100px;
+            margin-left: 30px;
+        }
+
+        .burger-title {
+            margin-left: 25px;
+            font-weight: 900;
+            font-size: 70px;
+            font-family: sans-serif;
+            color: #3d2514;
+            text-shadow: 2px 2px white;
+        }
+
+        .small-title {
+            font-size: 40px;
+        }
+
+        .french-fries-img {
+            position: absolute;
+            right: 310px;
+            top: 250px;
+        }
+
+        .coco-cola-img img {
+            position: absolute;
+            right: 60px;
+            height: 350px;
+            top: 280px;
+        }
+
+        .burger-img {
+            position: absolute;
+            right: 100px;
+            top: 350px;
+        }
+
+        .glow {
+            position: absolute;
+            right: -150px;
+            top: 100px;
+        }
+
+        .price {
+            height: 130px;
+            width: 130px;
+            background-color: red;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 550px;
+            right: 400px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.508);
+        }
+
+        .dash {
+            border: 3px dashed white;
+            border-radius: 100px;
+            height: 110px;
+            width: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .dash p {
+            color: white;
+            font-family: "Oswald", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .shadow {
+            position: absolute;
+            top: 650px;
+            right: 30px;
+        }
+
+        .shadow1 {
+            position: absolute;
+            top: 610px;
+            right: -120px;
+        }
+
+        .second-page {
+            height: 100px;
+            width: 100%;
+            position: relative;
+        }
+
+        .sec-container {
+            margin: 50px 100px;
+
+        }
+
+        .sec-img1 {
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+
+
+        }
+
+        .sec-img2 {
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            right: 150px;
+
+        }
+
+        .sec-img3 {
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            right: 150px;
+            top: 230px;
+
+        }
+
+        .sec-container p {
+            color: white;
+        }
+
+        .sec-para1 {
+            position: absolute;
+            font-size: 20px;
+            top: 10px;
+            left: 10px;
+            font-family: "Oswald", sans-serif;
+        }
+
+        .sec-para2 {
+            position: absolute;
+            font-size: 20px;
+            top: 10px;
+            left: 10px;
+            font-family: "Oswald", sans-serif;
+
+        }
+
+        .sec-para3 {
+            position: absolute;
+            font-size: 20px;
+            top: 10px;
+            left: 10px;
+            font-family: "Oswald", sans-serif;
+
+        }
+
+        .sec-para4 {
+            position: absolute;
+            font-size: 40px;
+            top: 40px;
+            left: 10px;
+            font-family: "Oswald", sans-serif;
+
+        }
+
+        .sec-para5 {
+            position: absolute;
+            font-size: 40px;
+            top: 40px;
+            left: 10px;
+            font-family: "Oswald", sans-serif;
+
+        }
+
+        .sec-para6 {
+            position: absolute;
+            font-size: 40px;
+            top: 40px;
+            left: 10px;
+            font-family: "Oswald", sans-serif;
+
+        }
+
+        .third-page {
+            width: 100%;
+            height: 300px;
+        }
+
+        .always-tasty-buger {
+            margin-top: 400px;
+            text-align: center;
+        }
+
+        .always-tasty-buger p {
+            color: #3d2514;
+            background-color: rgb(254, 185, 57);
+            font-family: sans-serif;
+            font-weight: 600;
+            padding: 7px 15px;
+            display: inline;
+        }
+
+        .t1 {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 40px;
+            font-weight: 900;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #3d2514;
+        }
+
+        .t2 {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 23px;
+            font-family: sans-serif;
+            color: #3d2514;
+        }
+
+        .container-div {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            margin-left: 60px;
+        }
+
+        .sha-dow {
+            margin-left: -20px;
+
+        }
+
+        .heading {
+            margin-left: 120px;
+            font-size: 25px;
+            color: #3d2514;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+        }
+
+        .parag {
+            margin-left: 15px;
+            font-size: 20px;
+            color: #3d2514;
+        }
+
+        .heading1 {
+            margin-top: -25px;
+            margin-left: 120px;
+            font-size: 25px;
+            color: #3d2514;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 800;
+        }
+
+        .parag1 {
+            margin-left: 15px;
+            font-size: 20px;
+            color: #3d2514;
+        }
+
+        button {
+            border: none;
+            padding: 10px 25px;
+            margin-left: 130px;
+            margin-top: 20px;
+            background-color: rgb(208, 0, 0);
+            color: white;
+            font-weight: 900;
+            margin-bottom: 50px;
+        }
+
+        .fourth-page {
+            margin-top: 400px;
+            height: 100vh;
+        }
+
+        .inner-fourth-page {
+            margin: auto;
+            display: flex;
+            width: 70%;
+            height: 300px;
+            box-shadow: 7px 7px 10px 1px lightgray;
+        }
+
+        .inner-fourth-page img {
+            width: 50%;
+        }
+
+        .context-page {
+            width: 700px;
+            padding: 10px;
+        }
+
+        .context-page .upper-title {
+            margin-top: 10px;
+            font-weight: 600;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #3d2514;
+        }
+
+        .context-page .title {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #3d2514;
+            font-weight: 900;
+            font-size: 25px;
+        }
+
+        .context-page .paragra {
+            margin-top: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #3d2514;
+        }
+
+        .fifth-page {
+            position: relative;
+            height: 100vh;
+        }
+
+        #img1 {
+            position: absolute;
+            top: 250px;
+        }
+
+        #img2 {
+            position: absolute;
+            top: -100px;
+        }
+
+        #img3 {
+            position: absolute;
+            right: 0;
+            top: 250px;
+        }
+
+        #reser {
+            color: #3d2514;
+            font-size: 25px;
+            margin-top: -350px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #book {
+            color: #3d2514;
+            font-size: 30px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 900;
+        }
+
+        .in1{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .in2{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .input-box{
+            display: flex;
+            gap: 10px;
+            margin-left: 400px;
+            margin-top: 200px;
+
+        }
+
+        input{
+            padding: 10px ;
+            width: 300px;
+        }
+
+        .btn-find{
+            margin-top: 0px;
+            margin-left: 0px;
+           
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="first-page">
+            <img class="logo" src="./img/logo.png" alt="error">
+
+            <div class="nav">
+
+                <div class="delivary">
+                    <img class="delivery-logo" src="./img/vacale.png" alt="">
+                    <p class="delivery">Express Delivery +1 979 019 920</p>
+                </div>
+
+                <div class="nav-list">
+                    <li>Home</li>
+                    <li>Menu</li>
+                    <li>Our Service</li>
+                    <li>Contact Us</li>
+                </div>
+            </div>
+
+            <div class="des">
+                <p>IT IS A GOOD TIME FOR THE GREAT TASTE OF BUGERS</p>
+            </div>
+
+            <div class="burger-title">
+                <p>BURGER</p>
+                <p class="small-title">WEEK</p>
+            </div>
+
+            <div class="food">
+                <div class="glow">
+                    <img src="./img/Glow.png" alt="">
+                </div>
+                <div class="french-fries-img">
+                    <img src="./img/French Fries.png" alt="">
+                </div>
+                <div class="coco-cola-img">
+                    <img src="./img/Drinks.png" alt="">
+                </div>
+                <div class="burger-img">
+                    <img src="./img/Burger Image.png" alt="">
+                </div>
+
+                <div class="shadow">
+                    <img src="./img/Shadow-1.png" alt="">
+
+                </div>
+                <div class="shadow1">
+                    <img src="./img/Shadow-1.png" alt="">
+
+                </div>
+
+                <div class="price">
+                    <div class="dash">
+                        <p>Rs 99. <samp>00</samp></p>
+                        <p>Only</p>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="second-page">
+
+            <div class="sec-container">
+                <div class="sec-img1">
+                    <img src="./img/sec-img1.png" alt="">
+                    <p class="sec-para1">TRY IT TODAY</p>
+                    <p class="sec-para4">MORE POPULAR BUGERS</p>
+                </div>
+
+                <div class="sec-img2">
+                    <img src="./img/sec-img2.png" alt="">
+                    <p class="sec-para2">TRY IT TODAY</p>
+                    <p class="sec-para5">MORE FUN <br> MORE TASTE</p>
+                </div>
+
+                <div class="sec-img3">
+                    <img src="./img/sec-img3.png" alt="">
+                    <p class="sec-para3">TRY IT TODAY</p>
+                    <p class="sec-para6">FRESH & CHILL</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="third-page">
+
+            <div class="always-tasty-buger">
+                <p>ALWAYS TASTY BUGER</p>
+            </div>
+
+            <div class="t1">
+                <p>CHOOSE & ENJOY</p>
+            </div>
+
+            <div class="t2">
+                <p>Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit.
+                    Aliquid commodi, doloribus,
+                    nostrum tenetur recusandae
+                    omnis rem fugiat.
+                </p>
+            </div>
+
+            <div class="container-div">
+
+                <div class="b1">
+                    <img src="./img/Burger-1.png" alt="">
+                    <img class="sha-dow" src="./img/Shadow.png" alt="">
+                    <p class="heading">Hello World</p>
+                    <p class="parag">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <button>ORDER NOW</button>
+                </div>
+
+                <div class="b2">
+                    <img src="./img/Burger Image.png" alt="">
+                    <img class="sha-dow" src="./img/Shadow.png" alt="">
+                    <p class="heading1">Hello World</p>
+                    <p class="parag1">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <button>ORDER NOW</button>
+                </div>
+
+                <div class="b3">
+                    <img src="./img/Burger-1.png" alt="">
+                    <img class="sha-dow" src="./img/Shadow.png" alt="">
+                    <p class="heading">Hello World</p>
+                    <p class="parag">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    <button>ORDER NOW</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="fourth-page">
+
+            <div class="inner-fourth-page">
+                <div class="context-page">
+                    <p class="upper-title">DISCOVER</p>
+                    <p class="title">UPCOMING EVENTS</p>
+                    <P class="paragra">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quasi
+                        architecto enim nisi voluptatum saepe incidunt libero, delectus laboriosam consectetur quibusdam
+                        blanditiis dolorum voluptatibus, iusto deleniti harum aspernatur voluptatem? Reprehenderit.</P>
+                </div>
+                <img src="./img/Burger Image 2.png" alt="">
+            </div>
+
+        </div>
+
+        <div class="fifth-page">
+            <img id="img1" src="./img/Bottle.png" alt="">
+            <img id="img2" src="./img/Burger.png" alt="">
+            <img id="img3" src="./img/Image.png" alt="">
+
+            <p id="reser">RESERVATION</p>
+            <p id="book">BOOK YOUR TABLE</p>
+
+            <div class="input-box">
+                <div class="in1">
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <input type="text" placeholder="Date">
+    
+                </div>
+    
+                <div class="in2">
+                    <input type="text" placeholder="Time">
+                    <input type="text" placeholder="Email">
+                    <button class="btn-find">Find A Table</button>
+    
+                </div>
+
+            </div>
+
+            
+
+
+
+        </div>
+
+
+
+    </div>
+
+</body>
+
+</html>
